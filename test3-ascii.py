@@ -23,12 +23,12 @@ height = 480
 inputVid = "/home/ntn/SlowMovie/Videos/test.mp4"
 
 frameCount = int(ffmpeg.probe(inputVid)['streams'][0]['nb_frames'])
-print("there are %d frames in this video" %frameCount)
+#print("there are %d frames in this video" %frameCount)
 
 #frame = random.randint(0,frameCount)
 for frame in range(1, frameCount):
  #frame = 1
- print(frame)
+ #print(frame)
 
  time = str(math.trunc(frame*41.666666))
  time = time.zfill(4)
@@ -38,7 +38,7 @@ for frame in range(1, frameCount):
 
  img = Image.open('/home/ntn/SlowMovie/grab.jpg')
 # img = img.convert(mode='1',dither=Image.FLOYDSTEINBERG)
- drawer = new_drawer("gradient", height=terminal_size(), colorize=True)
+ drawer = new_drawer("gradient", height=23, width=80, colorize=True)
  print(drawer(img))
 
- sys.stdin.readline()
+ #sys.stdin.readline()
