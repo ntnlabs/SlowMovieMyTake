@@ -4,8 +4,8 @@
 import os, time, sys, random, math
 import ffmpeg
 from PIL import Image
-#from picharsso import new_drawer
-#from picharsso.utils import terminal_size
+from picharsso import new_drawer
+from picharsso.utils import terminal_size
 
 def generate_frame(in_filename, out_filename, time, width, height):
     (
@@ -34,22 +34,11 @@ for frame in range(1, frameCount):
  time = time.zfill(4)
  final_time = "00:00:0"+time[0:1]+"."+time[1:]
 
-#msTimecode = "%dms"%(frame*41.666666)
-#print msTimecode
-#print time
-#print ">>",final_time
-
  generate_frame(inputVid, '/home/ntn/SlowMovie/grab.jpg', final_time, width, height)
 
-# img = Image.open('/home/ntn/SlowMovie/grab.jpg')
+ img = Image.open('/home/ntn/SlowMovie/grab.jpg')
 # img = img.convert(mode='1',dither=Image.FLOYDSTEINBERG)
-# img.show()
-
-# drawer = new_drawer("gradient", height=terminal_size(), colorize=True)
-# print(drawer(image))
+ drawer = new_drawer("gradient", height=terminal_size(), colorize=True)
+ print(drawer(img))
 
  sys.stdin.readline()
-
-# try:
-#  input_key = input("Press Enter to continue...")
-# except EOFError as e : pass
