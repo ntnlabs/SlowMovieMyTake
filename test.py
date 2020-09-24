@@ -1,14 +1,6 @@
 #!/usr/bin/python
+#this is compatible with python2 only
 # -*- coding:utf-8 -*-
-
-# *************************
-# ** Before running this **
-# ** code ensure you've  **
-# ** turned on SPI on    **
-# ** your Raspberry Pi   **
-# ** & installed the     **
-# ** Waveshare library   **
-# *************************
 
 import os, time, sys, random, math
 import ffmpeg
