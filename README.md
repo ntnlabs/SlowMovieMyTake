@@ -16,4 +16,4 @@ After running the code (in GUI), script opens video frame by frame in default im
 
 ## Planned ideas
 - running with ePaper screen
-- running with Ascii convertor so the image can be seen in console
+- running with Ascii convertor so the image can be seen in console [**IT WORKS !**](test3-ascii.py) :D
