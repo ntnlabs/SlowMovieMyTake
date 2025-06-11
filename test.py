@@ -1,5 +1,5 @@
-#!/usr/bin/python
-#this is compatible with python2 only
+#!/usr/bin/env python3
+# Originally written for Python 2, now runs on Python 3
 # -*- coding:utf-8 -*-
 
 import os, time, sys, random, math
@@ -22,12 +22,12 @@ height = 480
 inputVid = "/home/ntn/SlowMovie/Videos/test.mp4"
 
 frameCount = int(ffmpeg.probe(inputVid)['streams'][0]['nb_frames'])
-print("there are %d frames in this video" %frameCount)
+print("there are %d frames in this video" % frameCount)
 
 #frame = random.randint(0,frameCount)
 for frame in range(1, frameCount):
  #frame = 1
- print frame
+ print(frame)
 
  time = str(math.trunc(frame*41.666666))
  time = time.zfill(4)
@@ -43,4 +43,4 @@ for frame in range(1, frameCount):
  img = Image.open('/home/ntn/SlowMovie/grab.jpg')
  img = img.convert(mode='1',dither=Image.FLOYDSTEINBERG)
  img.show()
- raw_input("Press Enter to continue...")
+ input("Press Enter to continue...")
